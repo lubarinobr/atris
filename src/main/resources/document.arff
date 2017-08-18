@@ -1,10 +1,10 @@
-@relation rdm
+@relation document
 
-@attribute texto string
-@attribute classe {rdm, nao-rdm}
+@attribute text string
+@attribute classe {rdm, no-rdm}
 
 @data
-"me dar uma rdm", rdm
+"rdm", rdm
 "eu quero uma rdm" rdm
 "preciso de rdm" rdm
 "preciso de documento",nao-rdm
@@ -13,4 +13,3 @@
 "uma coisa" nao-rdm
 "uma arquivo" nao-rdm
 "me ajude com uma rdm" nao-rdm
-"eu nao quero uma rdm" nao-rdm

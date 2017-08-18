@@ -13,12 +13,10 @@ public class Talk implements Serializable {
 	private Long id;
 	private String name;
 	private String message;
-	private Date dateMessage;
+	private Date dateTime;
 	private String cssClass;
 	
-	public Talk() {
-		// TODO Auto-generated constructor stub
-	}
+	public Talk() {}
 	
 	public Talk(String mensagem) {
 		this.message = mensagem;
@@ -43,13 +41,12 @@ public class Talk implements Serializable {
 	public void setMessage(String message) {
 		this.message = message;
 	}
-
-	public Date getDateMessage() {
-		return dateMessage;
+	public Date getDateTime() {
+		return dateTime;
 	}
 
-	public void setDateMessage(Date dateMessage) {
-		this.dateMessage = dateMessage;
+	public void setDateTime(Date dateTime) {
+		this.dateTime = dateTime;
 	}
 
 	public String getCssClass() {
@@ -62,7 +59,8 @@ public class Talk implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Talk [id=" + id + ", name=" + name + ", message=" + message + ", dateMessage=" + dateMessage + "]";
+		return "Talk [id=" + id + ", name=" + name + ", message=" + message + ", dateTime=" + dateTime + ", cssClass="
+				+ cssClass + "]";
 	}
 	
 	

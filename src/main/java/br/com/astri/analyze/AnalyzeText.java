@@ -1,24 +1,18 @@
 package br.com.astri.analyze;
 
-import java.io.InputStream;
-import java.util.Properties;
+import br.com.astri.model.enums.AnswerTalk;
 
-import br.com.astri.classification.Classification;
+public class AnalyzeText extends AnalyzeAbstract {
 
-public class AnalyzeText {
-
-	private Properties properties = new Properties();
-	private InputStream input = null;
-	private Classification classification = new Classification();
-	
-	public String analyzeToRDM(String message) {
+	@Override
+	public String analyze(String message) {
 		
 		double probability = 0.0;
 		
 		try {
 			probability = classification.getProbability(message);
 		} catch (Exception e) {
-			return "Algo de errado aconteceu";
+			return AnswerTalk.PROBLEM.getType();
 		}
 		
 		
@@ -29,7 +23,7 @@ public class AnalyzeText {
 		
 		}else {
 			
-			return "Não entendo ainda esse comando";
+			return AnswerTalk.NO_UNDERSTAND.getType();
 		}
 		
 	}
@@ -40,20 +34,5 @@ public class AnalyzeText {
 		return properties.getProperty("text");
 	}
 	
-	private void loadProperties(String prop) {
-		
-		try {
-			
-			input = AnalyzeText.class.getClassLoader().getResourceAsStream(prop);
-			
-			if(input == null)
-				throw new Exception("Não foi possível encontrar esse arquivo");
-			
-			properties.load(input);
-			
-		}catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-	}
+
 }

@@ -11,7 +11,7 @@ import weka.core.converters.ConverterUtils.DataSource;
 import weka.core.stemmers.LovinsStemmer;
 import weka.filters.unsupervised.attribute.StringToWordVector;
 
-public class Classification {
+public class Classification implements IClassification {
 
 	private Instances instances;
 	
@@ -21,12 +21,14 @@ public class Classification {
 	
 	private Instance test;
 	
+	private String file = "rdm.arff"; 
+	
 	public Classification() {
 		loadFileToClassification();
 	}
 	
 	private void loadFileToClassification(){
-		DataSource dataSource = new DataSource(Classification.class.getClassLoader().getResourceAsStream("rdm.arff"));
+		DataSource dataSource = new DataSource(Classification.class.getClassLoader().getResourceAsStream(file));
 		try {
 			this.instances = dataSource.getDataSet();
 			this.instances.setClassIndex(instances.numAttributes() - 1);
@@ -80,4 +82,10 @@ public class Classification {
 			throw new Exception("Texto Vázio");
 		}
 	}
+
+	@Override
+	public void setFile(String file) {
+		this.file = file;
+	}
+
 }

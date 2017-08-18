@@ -20,7 +20,7 @@ public class AnalyzeTextTest {
 	
 	@Test
 	public void testTextIsNotRDM() {
-		this.text = analyze.analyzeToRDM("uma coisa de nova");
+		this.text = analyze.analyze("uma coisa de nova");
 		assertNotNull(text);
 		assertFalse(text.trim().isEmpty());
 		assertEquals("Não entendo ainda esse comando", text);
@@ -28,7 +28,7 @@ public class AnalyzeTextTest {
 	
 	@Test
 	public void testTextIsRDM() {
-		this.text = this.analyze.analyzeToRDM("quero uma rdm");
+		this.text = this.analyze.analyze("quero uma rdm");
 		assertNotNull(text);
 		assertFalse(this.text.trim().isEmpty());
 		

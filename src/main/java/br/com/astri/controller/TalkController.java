@@ -1,5 +1,8 @@
 package br.com.astri.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,14 +24,14 @@ public class TalkController {
 		return "Hello World";
 	}
 	
-	@RequestMapping(value="/api/talk",method = RequestMethod.POST)
+	@RequestMapping(value="/api/talk",method = RequestMethod.POST,consumes="application/json")
 	@ResponseBody
-	public ResponseEntity<Talk> getMessage(@RequestBody String message) {
+	public ResponseEntity<Talk> getMessage( @RequestBody List<Talk> history) {
 		
 		Talk talk = new Talk();
-		talk.setMessage(analyze.analyzeToRDM(message));
-		talk.setId(0l);
-		talk.setCssClass("other");
+//		talk.setMessage(analyze.analyze(message));
+//		talk.setId(0l);
+//		talk.setCssClass("other");
 		
 		return new ResponseEntity<Talk>(talk, HttpStatus.OK);
 	}
