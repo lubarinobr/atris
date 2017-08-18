@@ -12,7 +12,7 @@ import br.com.astri.analyze.AnalyzeText;
 import br.com.astri.model.Talk;
 
 @RestController
-public class HelloWorldController {
+public class TalkController {
 	
 	private AnalyzeText analyze = new AnalyzeText();
 	

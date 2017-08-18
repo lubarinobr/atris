@@ -3,19 +3,29 @@ package br.com.astri.analyze;
 import java.io.InputStream;
 import java.util.Properties;
 
+import br.com.astri.classification.Classification;
+
 public class AnalyzeText {
 
 	private Properties properties = new Properties();
 	private InputStream input = null;
+	private Classification classification = new Classification();
 	
 	public String analyzeToRDM(String message) {
 		
-		if(message.contains("RDM")) {
+		double probability = 0.0;
+		
+		try {
+			probability = classification.getProbability(message);
+		} catch (Exception e) {
+			return "Algo de errado aconteceu";
+		}
+		
+		
+		if(probability > 50.0) {
 			
-			if(message.contains("portlet"))
-				return getTextRDMPortlet();
+			return getTextRDMPortlet();
 			
-			return "Qual tipo de texto você deseja ? ";
 		
 		}else {
 			
