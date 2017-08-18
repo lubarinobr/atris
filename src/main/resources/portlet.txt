@@ -1,0 +1,4 @@
+PASSO 01:
+Aplicar revisão no ambiente de 
+http://sv2kstm1/web/Environments/QA6/web/Applications/PortalVivo/Components/Portlets/VIVOSuporteTecnicoPortlet
+At revision: 

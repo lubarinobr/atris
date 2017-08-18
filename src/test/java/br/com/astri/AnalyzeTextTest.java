@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import br.com.astri.analyze.AnalyzeText;
+import br.com.astri.model.enums.AnswerTalk;
 
 public class AnalyzeTextTest {
 
@@ -28,9 +29,10 @@ public class AnalyzeTextTest {
 	
 	@Test
 	public void testTextIsRDM() {
-		this.text = this.analyze.analyze("quero uma rdm");
+		this.text = this.analyze.analyze("dar rdm");
 		assertNotNull(text);
 		assertFalse(this.text.trim().isEmpty());
+		assertNotEquals(AnswerTalk.NO_UNDERSTAND.getType(), text);
 		
 	}
 

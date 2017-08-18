@@ -27,7 +27,8 @@ public class Classification implements IClassification {
 		loadFileToClassification();
 	}
 	
-	private void loadFileToClassification(){
+	@Override
+	public void loadFileToClassification(){
 		DataSource dataSource = new DataSource(Classification.class.getClassLoader().getResourceAsStream(file));
 		try {
 			this.instances = dataSource.getDataSet();
@@ -59,17 +60,16 @@ public class Classification implements IClassification {
 		
 	}
 	
-	public double getProbability(String text) throws Exception {
+	public double[] getProbability(String text) throws Exception {
 		
 		startLearn(text);
 		
 		if(this.classifier != null){
 			
-			double[] value = this.classifier.distributionForInstance(this.test);
-			return value[0] * 100;
+			return this.classifier.distributionForInstance(this.test);
 			
 		}else{
-			return 0.0;
+			return new double[0];
 		}
 		
 	}

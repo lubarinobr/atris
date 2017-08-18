@@ -15,6 +15,7 @@ public class Talk implements Serializable {
 	private String message;
 	private Date dateTime;
 	private String cssClass;
+	private String context;
 	
 	public Talk() {}
 	
@@ -56,11 +57,18 @@ public class Talk implements Serializable {
 	public void setCssClass(String cssClass) {
 		this.cssClass = cssClass;
 	}
+	public String getContext() {
+		return context;
+	}
+
+	public void setContext(String context) {
+		this.context = context;
+	}
 
 	@Override
 	public String toString() {
 		return "Talk [id=" + id + ", name=" + name + ", message=" + message + ", dateTime=" + dateTime + ", cssClass="
-				+ cssClass + "]";
+				+ cssClass + ", context=" + context + "]";
 	}
 	
 	
