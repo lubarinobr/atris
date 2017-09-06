@@ -16,6 +16,7 @@ public class Talk implements Serializable {
 	private Date dateTime;
 	private String cssClass;
 	private String context;
+	private int step;
 	
 	public Talk() {}
 	
@@ -23,6 +24,24 @@ public class Talk implements Serializable {
 		this.message = mensagem;
 	}
 	
+	
+	public Talk(String name, String message, Date dateTime, String cssClass, String context) {
+		this.name = name;
+		this.message = message;
+		this.dateTime = dateTime;
+		this.cssClass = cssClass;
+		this.context = context;
+	}
+	
+	public Talk(TalkBuilder TalkBuilder) {
+		this.id = TalkBuilder.id;
+		this.name = TalkBuilder.name;
+		this.message = TalkBuilder.message;
+		this.dateTime = TalkBuilder.dateTime;
+		this.cssClass = TalkBuilder.cssClass;
+		this.context = TalkBuilder.context;
+	}
+
 	public Long getId() {
 		return id;
 	}
@@ -64,6 +83,13 @@ public class Talk implements Serializable {
 	public void setContext(String context) {
 		this.context = context;
 	}
+	public int getStep() {
+		return step;
+	}
+
+	public void setStep(int step) {
+		this.step = step;
+	}
 
 	@Override
 	public String toString() {
@@ -71,5 +97,53 @@ public class Talk implements Serializable {
 				+ cssClass + ", context=" + context + "]";
 	}
 	
+	public static class TalkBuilder {
+		private Long id;
+		private String name;
+		private String message;
+		private Date dateTime;
+		private String cssClass;
+		private String context;
+		
+		public TalkBuilder() {
+			this.id = 01l;
+			this.cssClass = "other";
+			this.dateTime = new Date();
+		}
+		
+		public TalkBuilder withId(Long id) {
+			this.id = id;
+			return this;
+		}
+		
+		public TalkBuilder withName(String name) {
+			this.name = name;
+			return this;
+		}
+		
+		public TalkBuilder withMessage(String message) {
+			this.message = message;
+			return this;
+		}
+		
+		public TalkBuilder withDateTime(Date dateTime) {
+			this.dateTime = dateTime;
+			return this;
+		}
+		
+		public TalkBuilder withCssClass(String cssClass) {
+			this.cssClass = cssClass;
+			return this;
+		}
+		
+		public TalkBuilder withContext(String context) {
+			this.context = context;
+			return this;
+		}
+		
+		public Talk build() {
+			return new Talk(this);
+		}
+	}
 	
 }

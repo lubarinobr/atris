@@ -21,9 +21,16 @@ public class TalkController {
 	
 	private AnalyzeText analyze = new AnalyzeText();
 	
-	@RequestMapping("/api/hello")
-	public String greet() {
-		return "Hello World";
+	
+	@RequestMapping(value="/api/hello", method= RequestMethod.POST)
+	public ResponseEntity<Talk> getApresentation() {
+		
+		Talk talk = new Talk.TalkBuilder()
+					.withMessage("Olá Meu nome é Atris e vou lhe auxiliar na criação de documentos para RDM <br> Vamos começar ? <br> Que tipo de documento você deseja ? <br><br> <ul><li>RDM</li></ul>")
+					.withDateTime(new Date()).build();
+		
+		return new ResponseEntity<Talk>(talk, HttpStatus.OK);
+		
 	}
 	
 	@RequestMapping(value="/api/talk",method = RequestMethod.POST,consumes="application/json")
@@ -32,13 +39,13 @@ public class TalkController {
 		
 		Talk talk = getCurrentTalk(talks);
 		Talk lastTalk = getLastTalk(talks);
-		Talk response = new Talk();
 		String message = "";
+		String context = "";
 		
 		if(lastTalk == null || StringUtils.isBlank(lastTalk.getContext())) {
 			message = this.analyze.analyze(talk.getMessage());
 			if(AnswerTalk.DOCUMENT_TYPE.getType().equals(message)) {
-				response.setContext("RDM");
+				context = "RDM";
 			}
 			
 		}else {
@@ -47,10 +54,13 @@ public class TalkController {
 			
 		}
 		
-		response.setMessage(message);
-		response.setId(0l);
-		response.setCssClass("other");
-		response.setDateTime(new Date());
+		
+		Talk response = new Talk.TalkBuilder()
+				.withMessage(message)
+				.build();
+		
+		if(talk.getContext() == null)
+			response.setContext(context);
 		
 		return new ResponseEntity<Talk>(response, HttpStatus.OK);
 	}
@@ -68,7 +78,7 @@ public class TalkController {
 			throw new Exception("A conversa não existe");
 		
 		Talk talk = talks.stream()
-			.filter(userTalk -> userTalk.getContext() != null)
+			.filter(userTalk -> (userTalk.getContext() != null && !userTalk.getContext().trim().isEmpty()))
 			.reduce((a,b) -> b).orElse(null);
 		
 		return talk;

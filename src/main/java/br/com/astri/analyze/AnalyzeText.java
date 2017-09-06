@@ -2,6 +2,7 @@ package br.com.astri.analyze;
 
 import java.io.IOException;
 
+import br.com.astri.model.Talk;
 import br.com.astri.model.enums.AnswerTalk;
 
 public class AnalyzeText extends AnalyzeAbstract {
@@ -32,6 +33,10 @@ public class AnalyzeText extends AnalyzeAbstract {
 		return readFile(typeRDM);
 	}
 	
+	public String executeStep(Talk talk) {
+		return null;
+	}
+	
 	public String analyzeRDMType(String text) throws Exception {
 		this.classification.setFile("tipoRDM.arff");
 		this.classification.loadFileToClassification();
@@ -52,11 +57,8 @@ public class AnalyzeText extends AnalyzeAbstract {
 		}else if(prob[1] > 50) {
 			file = "middleware.txt";
 		
-		}else if(prob[2] > 50) {
-			file = "todos.properties";
-		
 		}else {
-			return "Arquivo não encontrado";
+			return "Ops, não entendi qual tipo você deseja ?";
 		}
 		
 		return getTextRDMPortlet(file);
