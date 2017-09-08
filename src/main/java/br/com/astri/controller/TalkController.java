@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.astri.analyze.AnalyzeText;
 import br.com.astri.model.Talk;
+import br.com.astri.model.Talk.TalkBuilder;
 import br.com.astri.model.enums.AnswerTalk;
 
 @RestController
@@ -39,28 +40,23 @@ public class TalkController {
 		
 		Talk talk = getCurrentTalk(talks);
 		Talk lastTalk = getLastTalk(talks);
+		int step = lastTalk != null ? lastTalk.getStep() : 0;
 		String message = "";
-		String context = "";
+		TalkBuilder builder = null;
+		try {
+			message = this.analyze.executeStep(talk, step);
 		
-		if(lastTalk == null || StringUtils.isBlank(lastTalk.getContext())) {
-			message = this.analyze.analyze(talk.getMessage());
-			if(AnswerTalk.DOCUMENT_TYPE.getType().equals(message)) {
-				context = "RDM";
-			}
-			
-		}else {
-			
-			message = this.analyze.analyzeRDMType(talk.getMessage());
-			
+		}catch (Exception e) {
+			message = e.getMessage();
+			lastTalk.setStep(step -1);
 		}
-		
 		
 		Talk response = new Talk.TalkBuilder()
 				.withMessage(message)
+				.withContext("RDM")
+				.withStep(lastTalk)
 				.build();
 		
-		if(talk.getContext() == null)
-			response.setContext(context);
 		
 		return new ResponseEntity<Talk>(response, HttpStatus.OK);
 	}

@@ -21,7 +21,7 @@ public abstract class AnalyzeAbstract {
 	protected IClassification classification = new Classification();
 	private String message = "";
 
-	public abstract String analyze(String text);
+	public abstract String analyze();
 
 	protected void loadProperties(String prop) {
 

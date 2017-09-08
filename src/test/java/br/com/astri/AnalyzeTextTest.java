@@ -21,7 +21,7 @@ public class AnalyzeTextTest {
 	
 	@Test
 	public void testTextIsNotRDM() {
-		this.text = analyze.analyze("uma coisa de nova");
+		this.text = analyze.analyze();
 		assertNotNull(text);
 		assertFalse(text.trim().isEmpty());
 		assertEquals("Não entendo ainda esse comando", text);
@@ -29,7 +29,7 @@ public class AnalyzeTextTest {
 	
 	@Test
 	public void testTextIsRDM() {
-		this.text = this.analyze.analyze("dar rdm");
+		this.text = this.analyze.analyze();
 		assertNotNull(text);
 		assertFalse(this.text.trim().isEmpty());
 		assertNotEquals(AnswerTalk.NO_UNDERSTAND.getType(), text);

@@ -40,6 +40,7 @@ public class Talk implements Serializable {
 		this.dateTime = TalkBuilder.dateTime;
 		this.cssClass = TalkBuilder.cssClass;
 		this.context = TalkBuilder.context;
+		this.step = TalkBuilder.step;
 	}
 
 	public Long getId() {
@@ -104,6 +105,7 @@ public class Talk implements Serializable {
 		private Date dateTime;
 		private String cssClass;
 		private String context;
+		private int step;
 		
 		public TalkBuilder() {
 			this.id = 01l;
@@ -138,6 +140,15 @@ public class Talk implements Serializable {
 		
 		public TalkBuilder withContext(String context) {
 			this.context = context;
+			return this;
+		}
+		
+		public TalkBuilder withStep(Talk talk) {
+			if(talk == null) {
+				this.step = 1;
+			}else {
+				this.step = talk.getStep() + 1;
+			}
 			return this;
 		}
 		

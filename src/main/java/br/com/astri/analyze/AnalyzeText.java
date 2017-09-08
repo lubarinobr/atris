@@ -1,20 +1,23 @@
 package br.com.astri.analyze;
 
 import java.io.IOException;
+import java.util.regex.Pattern;
 
 import br.com.astri.model.Talk;
 import br.com.astri.model.enums.AnswerTalk;
 
 public class AnalyzeText extends AnalyzeAbstract {
 
+	private String message;
+	
 	@Override
-	public String analyze(String message) {
+	public String analyze() {
 		double probability[];
 		try {
 			
 			this.classification.setFile("rdm.arff");
 			this.classification.loadFileToClassification();
-			probability = this.classification.getProbability(message);
+			probability = this.classification.getProbability(this.message);
 			
 			if((probability[0] * 100) > 50.0) {
 				return AnswerTalk.DOCUMENT_TYPE.getType();
@@ -33,14 +36,36 @@ public class AnalyzeText extends AnalyzeAbstract {
 		return readFile(typeRDM);
 	}
 	
-	public String executeStep(Talk talk) {
-		return null;
+	public String executeStep(Talk talk, int step) throws Exception {
+		
+		this.message = talk.getMessage();
+		
+		switch(step) {
+			case 0:
+				return analyze();
+			case 1:
+				return "Okay, preciso saber o número da RDM";
+			case 2:
+				getValidRDM();
+				return "Agora preciso saber o caminho do svn";
+				
+			default:
+				return "Hmmm, não entendi";
+		}
+		
 	}
 	
-	public String analyzeRDMType(String text) throws Exception {
+	private void getValidRDM() throws Exception {
+		final Pattern pattern = Pattern.compile("[RDM]+[1-9]+");
+		if(!pattern.matcher(this.message.toUpperCase()).matches()) {
+			throw new Exception("RDM inválida");
+		}
+	}
+	
+	public String analyzeRDMType() throws Exception {
 		this.classification.setFile("tipoRDM.arff");
 		this.classification.loadFileToClassification();
-		double[] prob = this.classification.getProbability(text);
+		double[] prob = this.classification.getProbability(this.message);
 		return getTypeTextFromProbability(prob);
 	}
 	
