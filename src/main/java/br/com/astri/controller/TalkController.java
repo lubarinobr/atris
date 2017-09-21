@@ -31,7 +31,7 @@ public class TalkController {
 	public ResponseEntity<Talk> getApresentation() {
 		
 		Talk talk = new Talk.TalkBuilder()
-					.withMessage("Olá Meu nome é Atris e vou lhe auxiliar na criação de documentos para RDM <br> Vamos começar ? <br> Que tipo de documento você deseja ? <br><br> <ul><li>RDM</li></ul>")
+					.withMessage("Olá Meu nome é Atris e vou lhe auxiliar na criação de documentos <br> Vamos começar ? <br> Que tipo de documento você deseja ? <br><br> <ul><li>Informativo</li><li>Declaração</li></ul>")
 					.withDateTime(new Date()).build();
 		
 		return new ResponseEntity<Talk>(talk, HttpStatus.OK);

@@ -27,7 +27,7 @@ import opennlp.tools.util.TrainingParameters;
 
 public class LearningCate {
 
-	public static void main(String[] args) throws IOException {
+	public static void teste(String[] args) throws IOException {
 		trainModel();
 		classifyNewDocument("Me dar uma documento");
 	}
