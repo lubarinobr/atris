@@ -50,11 +50,16 @@
 			<artifactId>commons-lang3</artifactId>
 			<version>3.6</version>
 		</dependency>
-
+		
 		<dependency>
-			<groupId>nz.ac.waikato.cms.weka</groupId>
-			<artifactId>weka-stable</artifactId>
-			<version>3.8.1</version>
+			<groupId>org.apache.opennlp</groupId>
+			<artifactId>opennlp-tools</artifactId>
+			<version>1.8.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.opennlp</groupId>
+			<artifactId>opennlp-uima</artifactId>
+			<version>1.8.2</version>
 		</dependency>
 
 

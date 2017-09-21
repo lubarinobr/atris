@@ -12,15 +12,19 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.astri.analyze.AnalyzeText;
+import br.com.astri.factory.AnalyzeFactory;
+import br.com.astri.model.Context;
 import br.com.astri.model.Talk;
 import br.com.astri.model.Talk.TalkBuilder;
 import br.com.astri.model.enums.AnswerTalk;
+import br.com.astri.model.enums.ContextEnum;
+import br.com.astri.nlp.Analyze;
+import br.com.astri.nlp.IAnalyze;
 
 @RestController
 public class TalkController {
 	
-	private AnalyzeText analyze = new AnalyzeText();
+	private IAnalyze service = new Analyze();
 	
 	
 	@RequestMapping(value="/api/hello", method= RequestMethod.POST)
@@ -39,23 +43,21 @@ public class TalkController {
 	public ResponseEntity<Talk> getMessage( @RequestBody List<Talk> talks) throws Exception {
 		
 		Talk talk = getCurrentTalk(talks);
-		Talk lastTalk = getLastTalk(talks);
-		int step = lastTalk != null ? lastTalk.getStep() : 0;
-		String message = "";
-		TalkBuilder builder = null;
-		try {
-			message = this.analyze.executeStep(talk, step);
 		
-		}catch (Exception e) {
-			message = e.getMessage();
-			lastTalk.setStep(step -1);
+		Talk response = null;
+		String contextType = null;
+		
+		talk.setContext(getLastTalk(talks).getContext());
+		
+		contextType = service.getContext(talk);
+		
+		if(StringUtils.isNotBlank(contextType)){
+			final Context context = AnalyzeFactory.getContext(contextType);
+			response = new Talk.TalkBuilder()
+					.withMessage(context.getMessage())
+					.withContext(contextType)
+					.build();
 		}
-		
-		Talk response = new Talk.TalkBuilder()
-				.withMessage(message)
-				.withContext("RDM")
-				.withStep(lastTalk)
-				.build();
 		
 		
 		return new ResponseEntity<Talk>(response, HttpStatus.OK);
@@ -75,9 +77,22 @@ public class TalkController {
 		
 		Talk talk = talks.stream()
 			.filter(userTalk -> (userTalk.getContext() != null && !userTalk.getContext().trim().isEmpty()))
-			.reduce((a,b) -> b).orElse(null);
+			.reduce((a,b) -> b).orElse(new Talk());
 		
 		return talk;
+	}
+	
+	private String getTemplateFile(List<Talk> talks) throws Exception {
+		Talk template = talks.stream()
+					.filter(userTalk -> (StringUtils.isEmpty(userTalk.getTemplateFile())))
+					.reduce((a, b) -> b).orElse(new Talk());
+		
+		
+		if(StringUtils.isEmpty(template.getTemplateFile())){
+			return "";
+		}
+		
+		return template.getTemplateFile();
 	}
 	
 }

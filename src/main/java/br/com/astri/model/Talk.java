@@ -17,6 +17,7 @@ public class Talk implements Serializable {
 	private String cssClass;
 	private String context;
 	private int step;
+	private String templateFile;
 	
 	public Talk() {}
 	
@@ -33,14 +34,15 @@ public class Talk implements Serializable {
 		this.context = context;
 	}
 	
-	public Talk(TalkBuilder TalkBuilder) {
-		this.id = TalkBuilder.id;
-		this.name = TalkBuilder.name;
-		this.message = TalkBuilder.message;
-		this.dateTime = TalkBuilder.dateTime;
-		this.cssClass = TalkBuilder.cssClass;
-		this.context = TalkBuilder.context;
-		this.step = TalkBuilder.step;
+	public Talk(TalkBuilder talkBuilder) {
+		this.id = talkBuilder.id;
+		this.name = talkBuilder.name;
+		this.message = talkBuilder.message;
+		this.dateTime = talkBuilder.dateTime;
+		this.cssClass = talkBuilder.cssClass;
+		this.context = talkBuilder.context;
+		this.step = talkBuilder.step;
+		this.templateFile = talkBuilder.templateFile;
 	}
 
 	public Long getId() {
@@ -91,6 +93,13 @@ public class Talk implements Serializable {
 	public void setStep(int step) {
 		this.step = step;
 	}
+	public String getTemplateFile() {
+		return templateFile;
+	}
+
+	public void setTemplateFile(String templateFile) {
+		this.templateFile = templateFile;
+	}
 
 	@Override
 	public String toString() {
@@ -106,6 +115,7 @@ public class Talk implements Serializable {
 		private String cssClass;
 		private String context;
 		private int step;
+		private String templateFile;
 		
 		public TalkBuilder() {
 			this.id = 01l;
@@ -140,6 +150,11 @@ public class Talk implements Serializable {
 		
 		public TalkBuilder withContext(String context) {
 			this.context = context;
+			return this;
+		}
+		
+		public TalkBuilder withTemplateFile(String templateFile){
+			this.templateFile = templateFile;
 			return this;
 		}
 		
