@@ -1,0 +1,219 @@
+<START:document> quero um documento <END>
+
+<START:document> quero um rdm <END>
+
+<START:document> quero um requesito de mudancas <END>
+
+<START:document> quero um requesito de mudanca <END>
+
+<START:document> quero um requisito de mudanca <END>
+
+<START:document> quero um requesito de mudancas <END>
+
+<START:document> quero uma documento <END>
+
+<START:document> quero uma rdm <END>
+
+<START:document> quero uma requesito de mudancas <END>
+
+<START:document> quero uma requesito de mudanca <END>
+
+<START:document> quero uma requisito de mudanca <END>
+
+<START:document> quero uma requesito de mudancas <END>
+
+<START:document> quero uma requesito de mudancas por favor <END>.
+
+<START:document> quero uma requesito de mudancas agora <END>.
+
+<START:document> quero uma requesito de mudancas nesse momento  <END>
+
+<START:document> quero uma requesito de mudancas neste instante <END> 
+
+<START:document> quero uma requesito de mudancas urgente <END>
+
+<START:document> um documento <END>
+
+<START:document> um rdm <END>
+
+<START:document> um requesito de mudancas <END>
+
+<START:document> um requesito de mudanca <END>
+
+<START:document> um requisito de mudanca <END>
+
+<START:document> um requesito de mudancas <END>
+
+<START:document> uma documento <END>
+
+<START:document> uma rdm <END>
+
+<START:document> uma requesito de mudancas <END>
+
+<START:document> uma requesito de mudanca <END>
+
+<START:document> uma requisito de mudanca <END>
+
+<START:document> uma requesito de mudancas <END>
+
+<START:document> documento <END>
+
+<START:document> rdm <END>
+
+<START:document> requesito de mudancas <END>
+
+<START:document> requesito de mudanca <END>
+
+<START:document> requisito de mudanca <END>
+
+<START:document> requesito de mudancas <END>
+
+<START:document> documento <END>
+
+<START:document> rdm <END> 
+
+<START:document> requesito de mudancas <END>
+
+<START:document> requesito de mudanca <END>
+
+<START:document> requisito de mudanca <END>
+
+<START:document> requesito de mudancas <END>
+
+<START:document> eu quero um documento <END>
+
+<START:document> eu quero um rdm <END>
+
+<START:document> eu quero um requesito de mudancas <END>
+
+<START:document> eu quero um requesito de mudanca <END>
+
+<START:document> eu quero um requisito de mudanca <END>
+
+<START:document> eu quero um requesito de mudancas <END>
+
+<START:document> eu quero uma documento <END>
+
+<START:document> eu quero uma rdm <END>
+
+<START:document> eu quero uma requesito de mudancas <END>
+
+<START:document> eu quero uma requesito de mudanca <END>
+
+<START:document> eu quero uma requisito de mudanca <END>
+
+<START:document> eu quero uma requesito de mudancas <END>
+
+<START:document> eu quero uma requesito de mudancas por favor <END>.
+
+<START:document> eu quero uma requesito de mudancas agora <END>.
+
+<START:document> eu quero uma requesito de mudancas nesse momento <END>
+
+<START:document> eu quero uma requesito de mudancas neste instante <END>
+
+<START:document> eu quero uma requesito de mudancas urgente <END>
+
+<START:document> cara quero um documento <END>
+
+<START:document> cara quero um rdm <END>
+
+<START:document> cara quero um requesito de mudancas <END>
+
+<START:document> cara quero um requesito de mudanca <END>
+
+<START:document> cara quero um requisito de mudanca <END>
+
+<START:document> cara quero um requesito de mudancas <END>
+
+<START:document> cara quero uma documento <END>
+
+<START:document> cara quero uma rdm <END>
+
+<START:document> cara quero uma requesito de mudancas <END>
+
+<START:document> cara quero uma requesito de mudanca <END>
+
+<START:document> cara quero uma requisito de mudanca <END>
+
+<START:document> cara quero uma requesito de mudancas <END>
+
+<START:document> cara quero uma requesito de mudancas por favor <END> .
+
+<START:document> cara quero uma requesito de mudancas agora <END>.
+
+<START:document> cara quero uma requesito de mudancas nesse momento <END>
+
+<START:document> cara quero uma requesito de mudancas neste instante <END>
+
+<START:document> cara quero uma requesito de mudancas urgente <END>
+
+<START:document> man quero um documento <END>
+
+<START:document> man quero um rdm <END>
+
+<START:document> man quero um requesito de mudancas <END>
+
+<START:document> man quero um requesito de mudanca <END>
+
+<START:document> man quero um requisito de mudanca <END>
+
+<START:document> man quero um requesito de mudancas <END>
+
+<START:document> man quero uma documento <END>
+
+<START:document> man quero uma rdm  <END>
+
+<START:document> man quero uma requesito de mudancas <END>
+
+<START:document> man quero uma requesito de mudanca <END>
+
+<START:document> man quero uma requisito de mudanca <END>
+
+<START:document> man quero uma requesito de mudancas <END>
+
+<START:document> man quero uma requesito de mudancas por favor <END>.
+
+<START:document> man quero uma requesito de mudancas agora <END>.
+
+<START:document> man quero uma requesito de mudancas nesse momento <END>
+
+<START:document> man quero uma requesito de mudancas neste instante <END>
+
+<START:document> man quero uma requesito de mudancas urgente <END>
+
+<START:document> girl quero um documento <END>
+
+<START:document> girl quero um rdm <END>
+
+<START:document> girl quero um requesito de mudancas <END>
+
+<START:document> girl quero um requesito de mudanca <END>
+
+<START:document> girl quero um requisito de mudanca <END>
+
+<START:document> girl quero um requesito de mudancas <END>
+
+<START:document> girl quero uma documento <END>
+
+<START:document> girl quero uma rdm <END>
+
+<START:document> girl quero uma requesito de mudancas <END>
+
+<START:document> girl quero uma requesito de mudanca <END>
+
+<START:document> girl quero uma requisito de mudanca <END>
+
+<START:document> girl quero uma requesito de mudancas <END>
+
+<START:document> girl quero uma requesito de mudancas por favor <END>.
+
+<START:document> girl quero uma requesito de mudancas agora <END>.
+
+<START:document> girl quero uma requesito de mudancas nesse momento <END>
+
+<START:document> girl quero uma requesito de mudancas neste instante <END>
+
+<START:document> girl quero uma requesito de mudancas urgente <END>
+
+

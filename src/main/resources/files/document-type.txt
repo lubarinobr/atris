@@ -1,0 +1,217 @@
+quero um documento
+
+quero um <START:rdm> rdm <END>
+
+quero um <START:rdm> requesito de mudancas <END>
+
+quero um <START:rdm> requesito de mudanca <END>
+
+quero um <START:rdm> requisito de mudanca <END>
+
+quero um <START:rdm> requesito de mudancas <END>
+
+quero uma documento
+
+quero uma <START:rdm> rdm <END>
+
+quero uma <START:rdm> requesito de mudancas <END>
+
+quero uma <START:rdm> requesito de mudanca <END>
+
+quero uma <START:rdm> requisito de mudanca <END>
+
+quero uma <START:rdm> requesito de mudancas <END>
+
+quero uma <START:rdm> requesito de mudancas <END> por favor.
+
+quero uma <START:rdm> requesito de mudancas <END> agora.
+
+quero uma <START:rdm> requesito de mudancas <END> nesse momento 
+
+quero uma <START:rdm> requesito de mudancas <END> neste instante 
+
+quero uma <START:rdm> requesito de mudancas <END> urgente
+
+um documento
+
+um <START:rdm> rdm <END>
+
+um <START:rdm> requesito de mudancas <END>
+
+um <START:rdm> requesito de mudanca <END>
+
+um <START:rdm> requisito de mudanca <END>
+
+um <START:rdm> requesito de mudancas <END>
+
+uma documento
+
+uma <START:rdm> rdm <END>
+
+uma <START:rdm> requesito de mudancas <END>
+
+uma <START:rdm> requesito de mudanca <END>
+
+uma <START:rdm> requisito de mudanca <END>
+
+uma <START:rdm> requesito de mudancas <END>
+
+documento
+
+<START:rdm> rdm <END>
+
+<START:rdm> requesito de mudancas <END>
+
+<START:rdm> requesito de mudanca <END>
+
+<START:rdm> requisito de mudanca <END>
+
+<START:rdm> requesito de mudancas <END>
+
+documento
+
+<START:rdm> rdm <END>
+
+<START:rdm> requesito de mudancas <END>
+
+<START:rdm> requesito de mudanca <END>
+
+<START:rdm> requisito de mudanca <END>
+
+<START:rdm> requesito de mudancas <END>
+
+eu quero um documento
+
+eu quero um <START:rdm> rdm <END>
+
+eu quero um <START:rdm> requesito de mudancas <END>
+
+eu quero um <START:rdm> requesito de mudanca <END>
+
+eu quero um <START:rdm> requisito de mudanca <END>
+
+eu quero um <START:rdm> requesito de mudancas <END>
+
+eu quero uma documento
+
+eu quero uma <START:rdm> rdm <END>
+
+eu quero uma <START:rdm> requesito de mudancas <END>
+
+eu quero uma <START:rdm> requesito de mudanca <END>
+
+eu quero uma <START:rdm> requisito de mudanca <END>
+
+eu quero uma <START:rdm> requesito de mudancas <END>
+
+eu quero uma <START:rdm> requesito de mudancas <END> por favor.
+
+eu quero uma <START:rdm> requesito de mudancas <END> agora.
+
+eu quero uma <START:rdm> requesito de mudancas <END> nesse momento
+
+eu quero uma <START:rdm> requesito de mudancas <END> neste instante
+
+eu quero uma <START:rdm> requesito de mudancas <END> urgente
+
+cara quero um documento
+
+cara quero um <START:rdm> rdm <END>
+
+cara quero um <START:rdm> requesito de mudancas <END>
+
+cara quero um <START:rdm> requesito de mudanca <END>
+
+cara quero um <START:rdm> requisito de mudanca <END>
+
+cara quero um <START:rdm> requesito de mudancas <END>
+
+cara quero uma documento
+
+cara quero uma <START:rdm> rdm <END>
+
+cara quero uma <START:rdm> requesito de mudancas <END>
+
+cara quero uma <START:rdm> requesito de mudanca <END>
+
+cara quero uma <START:rdm> requisito de mudanca <END>
+
+cara quero uma <START:rdm> requesito de mudancas <END>
+
+cara quero uma <START:rdm> requesito de mudancas <END> por favor .
+
+cara quero uma <START:rdm> requesito de mudancas <END> agora.
+
+cara quero uma <START:rdm> requesito de mudancas <END> nesse momento
+
+cara quero uma <START:rdm> requesito de mudancas <END> neste instante
+
+cara quero uma <START:rdm> requesito de mudancas <END> urgente
+
+man quero um documento
+
+man quero um <START:rdm> rdm <END>
+
+man quero um <START:rdm> requesito de mudancas <END>
+
+man quero um <START:rdm> requesito de mudanca <END>
+
+man quero um <START:rdm> requisito de mudanca <END>
+
+man quero um <START:rdm> requesito de mudancas <END>
+
+man quero uma documento
+
+man quero uma <START:rdm> rdm <END>
+
+man quero uma <START:rdm> requesito de mudancas <END>
+
+man quero uma <START:rdm> requesito de mudanca <END>
+
+man quero uma <START:rdm> requisito de mudanca <END>
+
+man quero uma <START:rdm> requesito de mudancas <END>
+
+man quero uma <START:rdm> requesito de mudancas <END> por favor.
+
+man quero uma <START:rdm> requesito de mudancas <END> agora.
+
+man quero uma <START:rdm> requesito de mudancas <END> nesse momento
+
+man quero uma <START:rdm> requesito de mudancas <END> neste instante
+
+man quero uma <START:rdm> requesito de mudancas <END> urgente
+
+girl quero um documento
+
+girl quero um <START:rdm> rdm <END>
+
+girl quero um <START:rdm> requesito de mudancas <END>
+
+girl quero um <START:rdm> requesito de mudanca <END>
+
+girl quero um <START:rdm> requisito de mudanca <END>
+
+girl quero um <START:rdm> requesito de mudancas <END>
+
+girl quero uma documento
+
+girl quero uma <START:rdm> rdm <END>
+
+girl quero uma <START:rdm> requesito de mudancas <END>
+
+girl quero uma <START:rdm> requesito de mudanca <END>
+
+girl quero uma <START:rdm> requisito de mudanca <END>
+
+girl quero uma <START:rdm> requesito de mudancas <END>
+
+girl quero uma <START:rdm> requesito de mudancas <END> por favor.
+
+girl quero uma <START:rdm> requesito de mudancas <END> agora.
+
+girl quero uma <START:rdm> requesito de mudancas <END> nesse momento
+
+girl quero uma <START:rdm> requesito de mudancas <END> neste instante
+
+girl quero uma <START:rdm> requesito de mudancas <END> urgente
